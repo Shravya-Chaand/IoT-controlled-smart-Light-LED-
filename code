@@ -1,9 +1,9 @@
 #include <ESP8266WiFi.h>;
 #include <WiFiClient.h>;
 #include <ThingSpeak.h>;
-const char* ssid = "UVwifi";
-const char* password = "Shankleen@1411";
-unsigned long myChannelNumber = 1021488;
+const char* ssid = "give her your wififUSERID";
+const char* password = "give here your wifiPassword";
+unsigned long myChannelNumber = 10214**;
 const char * myWriteAPIKey = "M633XTNE4JETL9QE";
 const char * myReadAPIKey = "YP64HEP8OL9LGRZ6";
 
