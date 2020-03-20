@@ -34,5 +34,6 @@ const char * myReadAPIKey = "YP64HEP8OL9LGRZ6";
   }
   else if(LED==0)
   {
-    digitalWri
+      digitalWrite(BLUE_LED,LOW);
+  }
   
