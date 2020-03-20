@@ -1,0 +1,35 @@
+#include <ESP8266WiFi.h>;
+#include <WiFiClient.h>;
+#include <ThingSpeak.h>;
+const char* ssid = "UVwifi";
+const char* password = "Shankleen@1411";
+unsigned long myChannelNumber = 1021488;
+const char * myWriteAPIKey = "M633XTNE4JETL9QE";
+const char * myReadAPIKey = "YP64HEP8OL9LGRZ6";
+
+WiFiClient client;
+int LED;
+int BLUE_LED=D3;
+
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(BLUE_LED,OUTPUT);
+WiFi.begin(ssid, password);
+ThingSpeak.begin(client);
+
+}
+void loop() {
+:
+
+ LED = ThingSpeak.readIntField(myChannelNumber, 1, myReadAPIKey);
+ if(LED==1)
+  {
+    digitalWrite(BLUE_LED,HIGH);
+  }
+  else if(LED==0)
+  {
+    digitalWrite(BLUE_LED,LOW);
+  }
+
+}
